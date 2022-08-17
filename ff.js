@@ -17,6 +17,10 @@ class ffentity{
         skill = s;
         body = b;  
     }
+
+    getCombatSkill(){
+        return this.skill;
+    }
 }
 
 
@@ -25,8 +29,9 @@ class ffentity{
 class weapon{
     skills;
     damage;
-    constructor(s, b);
-    function getSkills(){
+    constructor(s, b){}
+    
+     getSkills(){
         return skills;
     }
 }
@@ -46,6 +51,7 @@ class ffpc extends ffentity{
     skill;
     luck;
     inventory;
+    weapon;
     constructor (s,b, l){
         skill = s; 
         body = b; 
@@ -55,6 +61,18 @@ class ffpc extends ffentity{
     getSpecialSkill(skillname){
        retVal =  Array.from(skills).find(skill=>{skill.name == skillname})
        return retVal;
+    }
+
+    getCombatSkill(){
+        retVal = this.skill;
+        this.weapon.getSkills().forEach(skill=>{
+            let spec = this.getSpecialSkill(skill)
+            if(spec> retVal){
+                retVal = spec;
+            } 
+
+        })
+        return retVal;
     }
 }
 
@@ -74,10 +92,12 @@ class entitybuilder{
     }
 }
 
-function combat(entity, entity2){
-    if (entity.getWeapon()){
-        entity.getWeapon().
-    }
+//todo crits fumbles, actual logic, rough draft. 
+function opposedRoll(entity, entity2){
+    let first = entity.getCombatSkill()+ roll(2);
+    let second = entity2.getCombatSkill()+ roll(2);
+    
+    return entity
 }
 
 function roll(int){
