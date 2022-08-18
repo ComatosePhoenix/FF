@@ -40,12 +40,12 @@
             temp[0].classList.remove('hide');
         }
 
-        function increment(formElement){
+        function increment(formElement) {
             temp = Number(formElement.value)
-            if(isNaN(formElement.value)){
+            if (isNaN(formElement.value)) {
                 temp = 0;
             }
-            formElement.value= temp+1;
+            formElement.value = temp + 1;
         }
     </script>
     <title>Fighting Fantasy</title>
@@ -61,56 +61,103 @@
         <button>create a scene</button>
         <button>test a combat</button>
     </div>
-    <div name="forms"
-         class='hide forms'>
+    <div name="forms" class='hide forms'>
         <form name=cform>
             <div>
-                Name: <input name='fname'
-                       placeholder="Name">
-                Skill: <input name='fskill'
-                       placeholder="roll 1 dice, then add 6">
-                Body: <input name='fbody'
-                       placeholder="roll 2 dice, then add 12">
-                Luck: <input name='fluck'
-                       placeholder="roll 1 dice, then add 6">
+                Name: <input name='fname' placeholder="Name">
+                Skill: <input name='fskill' placeholder="roll 1 dice, then add 6">
+                Body: <input name='fbody' placeholder="roll 2 dice, then add 12">
+                Luck: <input name='fluck' placeholder="roll 1 dice, then add 6">
             </div>
             <div>
                 Pick Special Skills
-                <div >
-                    <div>Combat Skills</div>
+                <div style='display:flex;'>
                     <div>
-                     <div><input type="number" name ="fAxe" value="0">            <button type="button" onclick='increment(fAxe)'>Axe </button></div>
-                     <div><input type="number" name ="fDagger" value="0">         <button type="button" onclick='increment(fDagger)'>Dagger </button></div>
-                     <div><input type="number" name ="fPole" value="0">           <button type="button" onclick='increment(fPole)'>Pole Arm </button></div>
-                     <div><input type="number" name ="fSpear" value="0">          <button type="button" onclick='increment(fSpear)'>Spear </button></div>
-                     <div><input type="number" name ="fSword" value="0">          <button type="button" onclick='increment(fSword)'>Sword </button></div>
-                     <div><input type="number" name ="fTwo" value="0">            <button type="button" onclick='increment(fTwo)'>Two-handed Sword </button></div>
-                     <div><input type="number" name ="fBow" value="0">            <button type="button" onclick='increment(fBow)'>Bow </button></div>
-                     <div><input type="number" name ="fCrossbow" value="0">       <button type="button" onclick='increment(fCrossbow)'>Crossbow </button></div>
-                     <div><input type="number" name ="fJavelin" value="0">        <button type="button" onclick='increment(fJavelin)'>Javelin </button></div>
-                     <div><input type="number" name ="fThrowingDagger" value="0"> <button type="button" onclick='increment(fThrowingDagger)'>ThrowingDagger </button></div>
-                     <div><input type="number" name ="fStrength" value="0">       <button type="button" onclick='increment(fStrength)'>Strength </button></div>
-                     <div><input type="number" name ="fUnarmed" value="0">        <button type="button" onclick='increment(fUnarmed)'>Unarmed</button></div>
+                        <div>Combat Skills</div>
+                        <div>
+                            <div><input type="number" name="fAxe" value="0"> <button type="button"
+                                    onclick='increment(fAxe)'>Axe </button></div>
+                            <div><input type="number" name="fDagger" value="0"> <button type="button"
+                                    onclick='increment(fDagger)'>Dagger </button></div>
+                            <div><input type="number" name="fPole" value="0"> <button type="button"
+                                    onclick='increment(fPole)'>Pole Arm </button></div>
+                            <div><input type="number" name="fSpear" value="0"> <button type="button"
+                                    onclick='increment(fSpear)'>Spear </button></div>
+                            <div><input type="number" name="fSword" value="0"> <button type="button"
+                                    onclick='increment(fSword)'>Sword </button></div>
+                            <div><input type="number" name="fTwo" value="0"> <button type="button"
+                                    onclick='increment(fTwo)'>Two-handed Sword </button></div>
+                            <div><input type="number" name="fBow" value="0"> <button type="button"
+                                    onclick='increment(fBow)'>Bow </button></div>
+                            <div><input type="number" name="fCrossbow" value="0"> <button type="button"
+                                    onclick='increment(fCrossbow)'>Crossbow </button></div>
+                            <div><input type="number" name="fJavelin" value="0"> <button type="button"
+                                    onclick='increment(fJavelin)'>Javelin </button></div>
+                            <div><input type="number" name="fThrowingDagger" value="0"> <button type="button"
+                                    onclick='increment(fThrowingDagger)'>ThrowingDagger </button></div>
+                            <div><input type="number" name="fStrength" value="0"> <button type="button"
+                                    onclick='increment(fStrength)'>Strength </button></div>
+                            <div><input type="number" name="fUnarmed" value="0"> <button type="button"
+                                    onclick='increment(fUnarmed)'>Unarmed</button></div>
+                        </div>
                     </div>
-                    <div>Movement Skills</div>
-                    
+                    <div>
+                        <div>Movement Skills</div>
+                        <div>
+                            <div><input type="number" name="fClimb" value="0"> <button type="button"
+                                    onclick='increment(fClimb)'>Climb</button> </div>
+                            <div><input type="number" name="fDodge" value="0"> <button type="button"
+                                    onclick='increment(fDodge)'>Dodge</button> </div>
+                            <div><input type="number" name="fJump" value="0"> <button type="button"
+                                    onclick='increment(fJump)'>Jump</button> </div>
+                            <div><input type="number" name="fRide" value="0"> <button type="button"
+                                    onclick='increment(fRide)'>Ride</button> </div>
+                            <div><input type="number" name="fSwim" value="0"> <button type="button"
+                                    onclick='increment(fSwim)'>Swim</button> </div>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div>Stealth Skills</div>
+                        <div>
+                            Awareness
+                            Hide
+                            LockPicking
+                            SlightofHand
+                            Sneak
+                            TrapKnowledge
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>Learning Skills</div>
+                        <div>
+                            Con 
+                            Ettiquete
+                            Languages
+                            SeaLore
+                            UndergroundLore
+                            WoodLore
+                            WorldLore
+                            Magic
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
                 Pick Talents
-
+                <div>
+                    Dark Seeing
+                </div>
             </div>
         </form>
         <button onclick=rollStats(cform)>Roll for stats!</button>
         <button onclick=saveCharacter(cform)>Save Character</button>
         <button onclick=loadCharacter(cform)>Load Character</button>
     </div>
-    <div name="forms"
-         class='hide'></div>
-    <div name="forms"
-         class='hide'></div>
-    <div name="forms"
-         class='hide'></div>
+    <div name="forms" class='hide'></div>
+    <div name="forms" class='hide'></div>
+    <div name="forms" class='hide'></div>
 </body>
 
 </html>
